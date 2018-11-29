@@ -2,17 +2,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Main {
+public class AaiOtimizado {
 
 	public static void main(String[] args) {
 
-		//List<Integer> lista = preencheListaAleatorio(21);
+		List<Integer> lista = preencheListaAleatorio(1000);// Vetor com zeros e um elemento 1
+															// do tamanho passado no parametro
 
-		List<Integer> lista = preechePosicaoConhecida(19, 1);
+		// List<Integer> lista = preechePosicaoConhecida(19, 1);
 
-		System.out.println(lista.toString());
+		System.out.println(lista.toString());// Imprime o vetor que será varrido na busca.
 
-		System.out.println("\n\n" + procuraUmVetor(lista));
+		System.out.println("\nPosição resultante do elemento 1 na busca: " + procuraUmVetor(lista)
+				+ "\n\nCaso o resultado seja -1, não existe o elemento no vetor.");
 
 	}
 
@@ -22,7 +24,7 @@ public class Main {
 
 		Random rnd = new Random();
 		int posicaoRandom = rnd.nextInt(tam);
-		System.out.println("\n\n" + posicaoRandom);
+		System.out.println("Posição de prova em que o 1 está posicionado: " + posicaoRandom + "\n");
 
 		for (int i = 0; i < tam; i++) {
 
@@ -50,28 +52,16 @@ public class Main {
 		return lista;
 	}
 
-	/*
-	 * private static int procuraTrue(List<Integer> lista, int controleEsquerda, int
-	 * controleDireita) {
-	 * 
-	 * int posição = 0;
-	 * 
-	 * 
-	 * 
-	 * 
-	 * return posição; }
-	 */
-
 	public static int procuraUmVetor(List<Integer> lista) {
 
 		int posicaoInicial;
-		
+
 		if (lista.size() % 2 == 0) {
 			posicaoInicial = (lista.size() / 2) - 1;
-		}else
+		} else
 			posicaoInicial = lista.size() / 2;
-		
-		System.out.println(posicaoInicial);
+
+		System.out.println("\nPosição em que a busca começa: " + posicaoInicial);
 
 		int qtPasso = 1;
 		int posFinal = lista.size() - 1;
