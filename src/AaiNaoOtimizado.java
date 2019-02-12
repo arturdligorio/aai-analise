@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class AaiNaoOtimizado {
 
+	//teste de push
+
 	public static void main(String[] args) {
 
 		List<Integer> lista = preencheListaAleatorio(1000);// Vetor com zeros e um elemento 1
@@ -11,10 +13,10 @@ public class AaiNaoOtimizado {
 
 		// List<Integer> lista = preechePosicaoConhecida(19, 1);
 
-		System.out.println(lista.toString());// Imprime o vetor que será varrido na busca.
+		System.out.println(lista.toString());// Imprime o vetor que serï¿½ varrido na busca.
 
-		System.out.println("\nPosição resultante do elemento 1 na busca: " + procuraUmVetor(lista)
-				+ "\n\nCaso o resultado seja -1, não existe o elemento no vetor.");
+		System.out.println("\nPosiï¿½ï¿½o resultante do elemento 1 na busca: " + procuraUmVetor(lista)
+				+ "\n\nCaso o resultado seja -1, nï¿½o existe o elemento no vetor.");
 
 	}
 
@@ -24,7 +26,7 @@ public class AaiNaoOtimizado {
 
 		Random rnd = new Random();
 		int posicaoRandom = rnd.nextInt(tam);
-		System.out.println("Posição de prova em que o 1 está posicionado: " + posicaoRandom + "\n");
+		System.out.println("Posiï¿½ï¿½o de prova em que o 1 estï¿½ posicionado: " + posicaoRandom + "\n");
 
 		for (int i = 0; i < tam; i++) {
 
@@ -61,7 +63,7 @@ public class AaiNaoOtimizado {
 		} else
 			posicaoInicial = lista.size() / 2;
 
-		System.out.println("\nPosição em que a busca começa: " + posicaoInicial);
+		System.out.println("\nPosiï¿½ï¿½o em que a busca comeï¿½a: " + posicaoInicial);
 
 		int qtPasso = 1;
 		int posFinal = lista.size() - 1;
